@@ -10,19 +10,26 @@ export class AppComponent {
 
   title="course-project";
 
-  contacts:Contact[] = [];
-
- 
-
+  contacts:Contact[] = [];    
+  
   constructor() {
     this.contacts = [new Contact ("Pamela", "imagem", 789, "email"),
     new Contact ("Gabriel", "imagem", 989, "gabriel@email.com")]
   }
 
-  contactWasSelected(contact:Contact): void {
-    console.log(contact);
-  }
+  contatoRecebido:Contact;
+
+ receberContato(contatoSelecionado:Contact) {
+  this.contatoRecebido = contatoSelecionado;
+ }
+
+
 }
+
+
+  
+  
+
 
 
 

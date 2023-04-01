@@ -1,5 +1,5 @@
 <div>
-  <p (onContactSelected) = "contactWasSelected($event)" *ngFor="let c of contactsList">{{ c.name }}</p>
+  <p (click)="enviarContato(c)" *ngFor="let c of contactsList">{{ c.name }}</p>
 </div>
 
 

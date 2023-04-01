@@ -6,15 +6,18 @@ import { Contact } from '../contact.model';
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css']
 })
-export class ContactListComponent { 
+export class ContactListComponent {
 
- @Input() contactsList: Contact[] = [];
-
- @Output()
-  contactWasSelected: EventEmitter<Contact>;
+  @Input() contactsList: Contact[] = [];
 
 
- //@Output() onProductSelected: EventEmitter<Product>;
+  @Output() contatoEmissor: EventEmitter<Contact> = new EventEmitter();
+
+
+  enviarContato(contato: Contact) {    
+    this.contatoEmissor.emit(contato);
+  }
+
 
 
 }
