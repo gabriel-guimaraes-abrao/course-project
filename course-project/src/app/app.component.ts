@@ -8,31 +8,33 @@ import { Contact } from './contact.model';
 })
 export class AppComponent {
 
-  title="course-project";
+  title = "course-project";
 
-  contacts:Contact[] = [];    
-  
+  contacts: Contact[] = [];
+
+  contatoRecebido: Contact;
+
   constructor() {
-    this.contacts = [new Contact ("Pamela", "imagem", 789, "email"),
-    new Contact ("Gabriel", "imagem", 989, "gabriel@email.com")]
+    this.contatoRecebido = new Contact("", "", 0, "");
+    this.contacts = [new Contact("Pamela", "imagem", 789, "email"),
+    new Contact("Gabriel", "imagem", 989, "gabriel@email.com")]
   }
 
-  contatoRecebido:Contact;
 
- receberContato(contatoSelecionado:Contact) {
-  this.contatoRecebido = contatoSelecionado;
- }
+  receberContato(contatoSelecionado: Contact) {
+    this.contatoRecebido = contatoSelecionado;
+  }
 
 
 }
 
 
-  
-  
 
 
 
 
 
 
-  
+
+
+

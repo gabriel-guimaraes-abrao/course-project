@@ -1,13 +1,10 @@
 <mat-toolbar>Home</mat-toolbar>
 
-<app-contact-list [contactsList] = "contacts"
-                  (contatoEmissor) = "receberContato($event)"> </app-contact-list>
+<app-contact-list [contactsList] = "contacts" (contatoEmissor) = "receberContato($event)"></app-contact-list>
 
 <div>
-
-<p>{{contatoRecebido.name}}</p>
-<p>{{contatoRecebido.image}}</p>
-<p>{{contatoRecebido.phone}}</p>
-<p>{{contatoRecebido.email}}</p>
-
+    <p>{{contatoRecebido.name}}</p>
+    <p>{{contatoRecebido.image}}</p>
+    <p>{{contatoRecebido.phone}}</p>
+    <p>{{contatoRecebido.email}}</p>
 </div>
