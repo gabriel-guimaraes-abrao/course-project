@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { ContactListComponent } from './contact-list/contact-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+
 
 
 
@@ -22,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatToolbarModule,
     FormsModule,
+    ReactiveFormsModule,
     MatCardModule
   ],
   providers: [],

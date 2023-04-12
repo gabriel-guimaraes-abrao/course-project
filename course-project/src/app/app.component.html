@@ -13,5 +13,30 @@
         <p>{{contatoRecebido.phone}}</p>
         <p>{{contatoRecebido.email}}</p>
     </mat-card-content>
+</mat-card>
+
+    
+    <h2>Adicionar Contato</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    
+      <label for="nomeInput">Digite o nome: </label>
+      <input type="text" id="nomeInput" name="nome" ngModel><br>
+
+      <label for="imagemInput">Selecione a imagem: </label>
+      <input type="text" id="imagemInput" name="imagem" ngModel><br>
+
+      <label for="telefoneInput">Digite o telefone: </label>
+      <input type="text" id="telefoneInput" name="telefone" ngModel><br>
+
+      <label for="emailInput">Digite o email: </label>
+      <input type="text" id="emailInput" name="email" ngModel><br>
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
+
+
+
+
    
-  </mat-card>
