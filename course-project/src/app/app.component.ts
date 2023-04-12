@@ -10,16 +10,15 @@ export class AppComponent {
 
   title = "course-project";
 
-  contacts: Contact[] = [];
+  contacts: Contact[];
 
   contatoRecebido: Contact;
 
-  constructor() {
-    this.contatoRecebido = new Contact("", "", 0, "");
-    this.contacts = [new Contact("Pamela", "imagem", 789, "email"),
-    new Contact("Gabriel", "imagem", 989, "gabriel@email.com")]
-  }
-
+  constructor() {    
+    this.contacts = [
+      new Contact("Pamela", "./../assets/pamela.png", 789, "pamela@email.com"), 
+      new Contact("Gabriel", "./../assets/gabriel.png", 989, "gabriel@email.com")]    
+  }  
 
   receberContato(contatoSelecionado: Contact) {
     this.contatoRecebido = contatoSelecionado;

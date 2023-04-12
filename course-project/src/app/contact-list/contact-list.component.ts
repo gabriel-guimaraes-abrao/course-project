@@ -8,7 +8,7 @@ import { Contact } from '../contact.model';
 })
 export class ContactListComponent {
 
-  @Input() contactsList: Contact[] = [];
+  @Input() contactsList: Contact[];
 
 
   @Output() contatoEmissor: EventEmitter<Contact> = new EventEmitter();

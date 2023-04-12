@@ -2,9 +2,16 @@
 
 <app-contact-list [contactsList] = "contacts" (contatoEmissor) = "receberContato($event)"></app-contact-list>
 
-<div>
-    <p>{{contatoRecebido.name}}</p>
-    <p>{{contatoRecebido.image}}</p>
-    <p>{{contatoRecebido.phone}}</p>
-    <p>{{contatoRecebido.email}}</p>
-</div>
+
+<mat-card class="example-card" *ngIf="contatoRecebido">
+    <mat-card-header>      
+      <mat-card-title>{{contatoRecebido.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{contatoRecebido.image}}" alt="Photo of a Shiba Inu"> 
+   
+    <mat-card-content>
+        <p>{{contatoRecebido.phone}}</p>
+        <p>{{contatoRecebido.email}}</p>
+    </mat-card-content>
+   
+  </mat-card>
