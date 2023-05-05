@@ -24,13 +24,14 @@ export class AppComponent {
     this.contatoRecebido = contatoSelecionado;
   }
 
-  onSubmit(form:string): void {
-    let nome:string = Object.values(form)[0];  
-    let imagem:string = Object.values(form)[1];
-    let telefone:number = +Object.values(form)[2];
-    let email:string = Object.values(form)[3];
-    let novoContato = new Contact(nome,imagem,telefone,email);
-    this.contacts.push(novoContato);
+  onSubmit(form:any): void {
+    // let nome:string = Object.values(form)[0];  
+    // let imagem:string = Object.values(form)[1];
+    // let telefone:number = +Object.values(form)[2];
+    // let email:string = Object.values(form)[3];
+    // let novoContato = new Contact(nome,imagem,telefone,email);
+    // this.contacts.push(novoContato);
+    console.log(form)
   }
 
 }

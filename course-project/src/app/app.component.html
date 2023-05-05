@@ -17,7 +17,7 @@
 
     
     <h2>Adicionar Contato</h2>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     
       <label for="nomeInput">Digite o nome: </label>
       <input type="text" id="nomeInput" name="nome" ngModel><br>
