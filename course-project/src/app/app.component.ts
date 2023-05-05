@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Contact } from './contact.model';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -32,6 +33,7 @@ export class AppComponent {
     // let novoContato = new Contact(nome,imagem,telefone,email);
     // this.contacts.push(novoContato);
     console.log(form)
+   
   }
 
 }

@@ -20,21 +20,24 @@
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     
       <label for="nomeInput">Digite o nome: </label>
-      <input type="text" id="nomeInput" name="nome" ngModel><br>
+      <input type="text" id="nomeInput" name="name" ngModel required pattern="[a-zA-Z ]*" minlength="1" placeholder="Digite seu nome" #n = "ngModel"> <br>
+      <br><span *ngIf="(n.touched || f.submitted) && n.errors?.['required'] "> Name is required </span>
 
       <label for="imagemInput">Selecione a imagem: </label>
-      <input type="text" id="imagemInput" name="imagem" ngModel><br>
+      <input type="text" id="imagemInput" name="imagem" ngModel placeholder="Opcional"><br>
 
       <label for="telefoneInput">Digite o telefone: </label>
-      <input type="text" id="telefoneInput" name="telefone" ngModel><br>
+      <input type="number" id="telefoneInput" name="telefone" ngModel required placeholder="Digite seu telefone"><br>
 
       <label for="emailInput">Digite o email: </label>
-      <input type="text" id="emailInput" name="email" ngModel><br>
-
+      <input type="email" id="emailInput" name="email" ngModel required email placeholder="blablabla@bleble.com" #e = "ngModel"><br>
+      <br><span *ngIf="(e.touched || f.submitted) && e.errors?.['email'] "> Enter a valid email </span>
+      
       <button type="submit">Enviar</button>
 
     </form>
 
+    
 
 
 
